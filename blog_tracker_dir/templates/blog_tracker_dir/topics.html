@@ -1,0 +1,15 @@
+{% extends "blog_tracker_dir/base.html" %} 
+
+{% block content %}
+
+<p>Topics</p>
+
+<ul>
+    {% for topic in topics %}
+    <li>
+        <a href="{% url 'blog_tracker_dir:topic' topic.id %}">{{ topic }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %} 
